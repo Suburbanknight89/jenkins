@@ -1,4 +1,4 @@
-package qa.guru.tests.utils;
+package qa.guru.test.utils;
 
 public class RandomUtils {
 
