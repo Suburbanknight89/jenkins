@@ -1,4 +1,4 @@
-package qa.guru.test.components;
+package qa.guru.tests.components;
 
 import static com.codeborne.selenide.Selenide.$;
 import static java.lang.String.format;

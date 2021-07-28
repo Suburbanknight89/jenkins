@@ -2,7 +2,7 @@ package tests.demoqa;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
-import qa.guru.test.TestBase;
+import qa.guru.tests.TestBase;
 
 import static com.codeborne.selenide.Condition.text;
 import static com.codeborne.selenide.Selectors.byText;
