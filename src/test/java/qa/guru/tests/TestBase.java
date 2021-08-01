@@ -15,13 +15,12 @@ public class TestBase {
 
 	@BeforeAll
 	static void setup() {
+		String login = credentials.login();
+		String password = credentials.password();
 		SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("enableVNC", true);
 		capabilities.setCapability("enableVideo", true);
-		String login = credentials.login();
-		String password = credentials.password();
-		String browser = System.getProperty("link");
 
 		Configuration.browserCapabilities = capabilities;
 		Configuration.startMaximized = true;
