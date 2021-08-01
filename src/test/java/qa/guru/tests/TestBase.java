@@ -26,7 +26,6 @@ public class TestBase {
 		Configuration.browserCapabilities = capabilities;
 		Configuration.startMaximized = true;
 		Configuration.remote = format("https://%s:%s@" + System.getProperty("link"), login, password);
-		Configuration.startMaximized = true;
 	}
 
 	@AfterEach

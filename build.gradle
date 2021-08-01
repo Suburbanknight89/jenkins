@@ -41,9 +41,6 @@ tasks.withType(JavaCompile) {
 
 
 tasks.withType(Test) {
-    useJUnitPlatform()
-
-    tasks.withType(Test) {
         systemProperties(System.getProperties())
         systemProperty("link", System.getProperty("link", "selenoid.autotests.cloud/wd/hub/"))
         useJUnitPlatform()
