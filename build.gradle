@@ -52,8 +52,8 @@ tasks.withType(Test) {
                 exceptionFormat "short"
             }
         }
-    }
 }
+
 
 task smoke(type: Test) {
     useJUnitPlatform {
