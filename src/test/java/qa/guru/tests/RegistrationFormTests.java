@@ -1,4 +1,4 @@
-package tests.demoqa;
+package qa.guru.tests;
 
 import com.github.javafaker.Faker;
 import org.junit.jupiter.api.Test;
@@ -34,7 +34,7 @@ public class RegistrationFormTests extends TestBase {
     @Test
     void successfulFillFormTest() {
         step("Open students registration form", () -> {
-            open("https://demoqa.com/automation-practice-form");
+            open("automation-practice-form");
             $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         });
 

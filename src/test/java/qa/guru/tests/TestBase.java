@@ -8,6 +8,9 @@ import org.junit.jupiter.api.BeforeAll;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import qa.guru.helpers.Attach;
 
+import static qa.guru.tests.config.Credentials.credentials;
+import static java.lang.String.format;
+
 public class TestBase {
 
 	@BeforeAll
@@ -17,10 +20,15 @@ public class TestBase {
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("enableVNC", true);
 		capabilities.setCapability("enableVideo", true);
+		String login = credentials.login();
+		String password = credentials.password();
+		String browser = System.getProperty("link");
 
 		Configuration.browserCapabilities = capabilities;
 		Configuration.startMaximized = true;
-		Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub/";
+		Configuration.remote = format("https://%s:%s@%s", login, password, browser);
+		Configuration.baseUrl = "https://demoqa.com/";
+		Configuration.startMaximized = true;
 	}
 
 	@AfterEach
