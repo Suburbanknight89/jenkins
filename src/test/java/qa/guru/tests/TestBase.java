@@ -25,6 +25,7 @@ public class TestBase {
 
 		Configuration.browserCapabilities = capabilities;
 		Configuration.startMaximized = true;
+		Configuration.baseUrl = "https://demoqa.com";
 		Configuration.remote = format("https://%s:%s@" + System.getProperty("url"), login, password);
 	}
 
