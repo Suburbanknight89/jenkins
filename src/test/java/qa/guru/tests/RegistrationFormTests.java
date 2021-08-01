@@ -34,7 +34,7 @@ public class RegistrationFormTests extends TestBase {
     @Test
     void successfulFillFormTest() {
         step("Open students registration form", () -> {
-            open("automation-practice-form");
+            open("https://demoqa.com/automation-practice-form");
             $(".practice-form-wrapper").shouldHave(text("Student Registration Form"));
         });
 
